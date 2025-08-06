@@ -1,0 +1,337 @@
+/* ฟอนต์หลัก */
+body {
+  font-family: 'Sukhumvit Set', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #0659ff;
+  /* เทียบเท่า bg-gray-100 */
+  color: #1f2937;
+  /* เทียบเท่า text-gray-900 */
+}
+
+/* ปุ่มสไตล์ */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  transition-property: all;
+  transition-duration: 0.2s;
+}
+
+.btn:hover {
+  filter: brightness(95%);
+}
+
+
+.btn-green {
+  background-color: #22c55e;
+  color: #fff;
+}
+
+.btn-green:hover {
+  background-color: #16a34a;
+
+}
+
+.btn-blue {
+  background-color: #2563eb;
+
+  color: #fff;
+
+}
+
+.btn-blue:hover {
+  background-color: #1e40af;
+
+}
+
+.search-input-container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  display: flex;
+  /* เพื่อจัดเรียง Input และ Button ในแนวนอน */
+  align-items: center;
+  /* จัดกึ่งกลางแนวตั้ง */
+  /* ปรับขนาดความกว้าง */
+  width: 90%;
+  /* หรือกำหนดเป็น pixel เช่น width: 400px; */
+  max-width: 400px;
+  /* กำหนดความกว้างสูงสุดถ้าต้องการ */
+  /* ปรับขนาดความสูง (ความยาว) */
+  height: auto;
+  /* ให้ปรับความสูงอัตโนมัติตามเนื้อหา */
+  min-height: 3rem;
+  /* กำหนดความสูงขั้นต่ำ */
+  padding: 0.5rem;
+  /* ปรับ padding โดยรวม */
+}
+
+/* ปรับขนาด Input ภายใน */
+.search-input-container input {
+  flex-grow: 1;
+  /* ให้ Input ขยายจนเต็มพื้นที่ที่เหลือ */
+  padding: 0.75rem;
+  /* เพิ่ม padding ภายใน Input */
+  border: none;
+  /* ลบเส้นขอบ */
+  outline: none;
+  /* ลบเส้นเมื่อ Focus */
+  font-size: 1rem;
+  /* ปรับขนาดตัวอักษร */
+}
+
+/* ปรับขนาด Button ค้นหา */
+.search-input-container button {
+  background-color: #22c55e;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition-property: all;
+  transition-duration: 0.2s;
+  border: none;
+  /* ลบเส้นขอบ */
+  border-radius: 0 0.5rem 0.5rem 0;
+  /* ปรับ BorderRadius ให้เข้ากับ Container */
+  cursor: pointer;
+  font-size: 1rem;
+  /* ปรับขนาดตัวอักษร */
+}
+
+.search-input-container button:hover {
+  background-color: #16a34a;
+}
+
+
+.search-panel {
+  background-color: #eff6ff;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dbeafe;
+  overflow: hidden;
+  display: flex;
+  /* เพิ่ม Flexbox */
+  flex-direction: column;
+  /* จัดเรียงเนื้อหาภายในตามแนวตั้ง */
+  align-items: center;
+  /* จัดกึ่งกลางเนื้อหาตามแนวขวาง */
+  padding: 1.5rem;
+  /* ปรับ padding ให้เหมาะสม */
+  justify-content: center;
+    /* จัดข้อความ/ไอคอนตรงกลาง */
+    align-items: center;
+}
+
+.search-input-container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  width: 80%;
+  /* ปรับขนาดความกว้างตามต้องการ */
+  margin-top: 1rem;
+  /* เพิ่ม margin ด้านบนเพื่อเว้นระยะ */
+  margin-bottom: 1rem;
+  /* เพิ่ม margin ด้านล่างเพื่อเว้นระยะ */
+}
+
+/* ปรับ margin ของส่วนอื่นๆ ใน SearchPanel เพื่อให้ดูสมดุล */
+.search-panel>.mt-6:first-of-type {
+  margin-top: 2rem;
+}
+
+.search-panel>.mt-6:last-of-type {
+  margin-bottom: 2rem;
+}
+/* กล่องค้นหา */
+.search-box {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 200%;
+
+}
+
+
+.route-option {
+  padding: 0.75rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.2s;
+  background-color: #fafafa;
+}
+
+.route-option:hover {
+  border-color: #9ca3af;
+}
+
+.route-option-selected {
+  border-color: #22c55e;
+  background-color: #33a355;
+}
+
+.route-option-unselected {
+  border-color: #255398;
+}
+
+.route-option-unselected:hover {
+  border-color: #9ca3af;
+}
+
+/* กล่องแผนที่ */
+.map-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* ข้อความหัวเรื่อง */
+.title-header {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* ข้อความรอง */
+.subtitle {
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+/* Animation สำหรับปุ่ม */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.animate-pulse-green:hover {
+  animation: pulse 1.5s infinite;
+}
+
+/* ตกแต่งแพเนลด้านซ้าย */
+.search-panel {
+  background-color: #eff6ff;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dbeafe;
+  overflow: hidden;
+}
+
+/* ตกแต่งแผนที่ */
+.map-view {
+  background-color: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.search-input-container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* ตกแต่งปุ่มค้นหา */
+.search-button {
+  background-color: #22c55e;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition-property: all;
+  transition-duration: 0.2s;
+}
+
+.search-button:hover {
+  background-color: #16a34a;
+}
+
+/* ตกแต่งปุ่มแสดงแผนที่ */
+.map-button {
+  background-color: #22c55e;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition-property: all;
+  transition-duration: 0.2s;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  min-width: 1000px;
+    /* กำหนดความกว้างขั้นต่ำ */
+  min-height: 3rem;
+    /* กำหนดความสูงขั้นต่ำ */
+}
+
+.map-button:hover {
+  background-color: #16a34a;
+}
+
+/* ตกแต่งปุ่มสอบถาม */
+.assistant-button {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition-property: all;
+  transition-duration: 0.2s;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  min-width: 1000px;
+    /* กำหนดความกว้างขั้นต่ำ */
+  min-height: 3rem;
+    /* กำหนดความสูงขั้นต่ำ */
+}
+
+.assistant-button:hover {
+  background-color: #2563eb;
+
+}
+
+/* ตกแต่งกล่องเลือกเส้นทาง */
+.route-container {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  transition-property: all;
+  transition-duration: 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  min-width: 1000px;
+    /* กำหนดความกว้างขั้นต่ำ */
+  min-height: 3rem;
+    /* กำหนดความสูงขั้นต่ำ */
+
+
+}
+
+.route-container:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+}
