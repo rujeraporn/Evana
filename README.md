@@ -1,1 +1,1 @@
-# Evana
+# Delete this file
