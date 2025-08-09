@@ -1,0 +1,231 @@
+.layout-container {
+  display: flex;
+  height: 95vh;
+  width: 90vw; /* ขยายให้เต็ม background */
+  margin-left: -200px; /* ชิดซ้าย */
+}
+/* ฟอนต์และพื้นหลัง */
+body {
+  font-family: 'Sukhumvit Set', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #0659ff;
+  color: #1f2937;
+  margin: -200;
+  font-size: 1.5rem;
+}
+
+.sidebar {
+  flex: 1; /* ให้ sidebar และ main-content กว้างเท่ากัน */
+  background: #eff6ff;
+  padding: 2rem 1rem;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  height: 85vh; 
+  overflow: hidden; 
+}
+
+.main-content {
+  flex: 1; /* ให้ sidebar และ main-content กว้างเท่ากัน */
+  background: #fff;
+  padding: 2rem;
+  overflow: hidden; 
+  margin-left: 0; 
+  height: 85vh; 
+}
+
+
+/* ปุ่มทั่วไป */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+.btn:hover {
+  filter: brightness(95%);
+}
+
+/* ปุ่มสี */
+.btn-green {
+  background-color: #22c55e;
+  color: white;
+}
+
+
+/* ค้นหา */
+.search-input-container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  max-height: 300px;
+  min-height: 100px;
+  padding: 0.5rem;
+}
+
+.search-input-container input {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+}
+
+.search-input-container button {
+  background-color: #22c55e;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.search-input-container button:hover {
+  background-color: #16a34a;
+}
+
+/* ค้นหา */
+.search-panel {
+  background-color: #eff6ff;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 5px solid #dbeafe;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+/* ตัวเลือกเส้นทาง */
+.route-container {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  border: 5px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 700px;
+  max-height: 300px; 
+  min-height: 100px; 
+}
+
+.route-option {
+  padding: 0.75rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #fafafa;
+  margin-top: 2rem;
+}
+
+.route-option:hover {
+  border-color: #9ca3af;
+}
+
+.route-option-selected {
+  border-color: #22c55e;
+  background-color: #33a355;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.route-option-unselected {
+  border-color: #255398;
+  margin-bottom: 2rem;
+}
+
+/* ปุ่มแผนที่ */
+.map-button {
+  background-color: #16a34a;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 700px;
+  min-height: 4rem;
+  font-size: 1.5rem; 
+}
+
+/* ปุ่มผู้ช่วย */
+.assistant-button {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 700px;
+  min-height: 4rem;
+  margin-top: 0rem;
+  font-size: 1.5rem; 
+  
+}
+
+
+/* แผนที่ */
+.map-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.map-view {
+  height: 100%;
+}
+
+/* ข้อความ */
+.title-header {
+  color: #0659ff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  color: #333;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* ปุ่ม animate */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.animate-pulse-green:hover {
+  animation: pulse 1.5s infinite;
+}
